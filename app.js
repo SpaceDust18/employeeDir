@@ -4,7 +4,7 @@ import employees from "./db/employees.js"
 const app = express()
 
 
-//It helps to write most specific route to avoid errors for the next error test. 
+//It helps to write most specific route first and go in order of specificity to avoid errors durring the next error test. 
 
 app.route('/employees/random').get((req, res) => {
     if (!employees || employees.length === 0) {
